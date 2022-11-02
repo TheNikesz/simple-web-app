@@ -13,10 +13,8 @@ RUN --mount=type=ssh git clone git@github.com:TheNikesz/simple-web-app.git simpl
 # Specify a working directory
 WORKDIR /simplewebapp
 
-# Install some depenendencies
-COPY ./package.json ./
+# Install depenendencies
 RUN npm install
-COPY ./ ./
 
 # Default command
 CMD ["npm", "start"]
